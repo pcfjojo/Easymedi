@@ -1,13 +1,59 @@
 <ion-header>
   <ion-navbar>
     <ion-title>
-      TypeORM Demo
+      Easy Medi
     </ion-title>
   </ion-navbar>
 </ion-header>
 
 <ion-content>
-  <ion-list>
+    <ion-card>
+        <ion-list>
+          <button ion-item (click)="dashboardPage()">
+            <ion-icon name="speedometer" item-start></ion-icon>
+            Dashboard
+          </button>
+      
+          <button ion-item (click)="medicinePage()"> 
+            <ion-icon name="medkit" item-start></ion-icon>
+            Medicine
+          </button>
+      
+          <button ion-item (click)="clientPage()">
+            <ion-icon name="contacts" item-start></ion-icon>
+            Clients
+          </button>
+      
+          <button ion-item (click)="salesPage()">
+            <ion-icon name="cash" item-start></ion-icon>
+            All Sales
+          </button>
+      
+          <button ion-item (click)="expensesPage()">
+            <ion-icon name="ios-basket" item-start></ion-icon>
+            Expenses
+          </button>
+      
+          <button ion-item (click)="appointmentPage()">
+              <ion-icon name="calendar" item-start></ion-icon>
+              Appointment
+            </button>
+
+          <button ion-item (click)="reportPage()">
+            <ion-icon name="paper" item-start></ion-icon>
+            Reports
+          </button>
+      
+          <button ion-item (click)="staffPage()">
+              <ion-icon name="person" item-start></ion-icon>
+              Staff
+            </button>
+        </ion-list>
+      </ion-card>
+
+
+
+  <!-- <ion-list>
     <ion-item>
       <ion-spinner *ngIf="!savedPost" item-start></ion-spinner>
       <ion-icon *ngIf="savedPost" name="checkmark" item-start color="secondary"></ion-icon>
@@ -21,5 +67,5 @@
       <ion-item>Author: {{loadedPost?.author.name}}</ion-item>
       <ion-item>Categories: {{getCategories()}}</ion-item>
     </ion-item-group>
-  </ion-list>
+  </ion-list> -->
 </ion-content>

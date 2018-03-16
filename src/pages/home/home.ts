@@ -1,10 +1,18 @@
+import { StaffPage } from './../staff/staff';
+import { AppointmentPage } from './../appointment/appointment';
+import { ExpensePage } from './../expense/expense';
+import { SalePage } from './../sale/sale';
+import { MedicinePage } from './../medicine/medicine';
+import { DashboardPage } from './../dashboard/dashboard';
 import { Component } from '@angular/core';
-import { NavController } from 'ionic-angular';
+import { NavController, App } from 'ionic-angular';
 import { getRepository, Repository } from 'typeorm';
 
 import { Author } from '../../entities/author';
 import { Category } from '../../entities/category';
 import { Post } from '../../entities/post';
+import { ClientPage } from '../client/client';
+import { ReportPage } from '../report/report';
 
 @Component({
   selector: 'page-home',
@@ -14,12 +22,37 @@ export class HomePage {
   private savedPost: boolean = false;
   private loadedPost: Post = null;
 
-  constructor(public navCtrl: NavController) { }
+  constructor(public navCtrl: NavController,  private app: App) { }
 
   ionViewDidLoad() {
     this.runDemo();
   }
 
+  dashboardPage() {
+    this.navCtrl.push(DashboardPage);
+  }
+  medicinePage() {
+    this.navCtrl.push(MedicinePage);
+  }
+  clientPage() {
+    this.navCtrl.push(ClientPage);
+  }
+  salesPage() {
+    this.navCtrl.push(SalePage);
+  }
+  expensesPage() {
+    this.navCtrl.push(ExpensePage);
+  }
+  appointmentPage() {
+    this.navCtrl.push(AppointmentPage);
+  }
+  reportPage() {
+    this.navCtrl.push(ReportPage);
+  }
+  staffPage() {
+    this.navCtrl.push(StaffPage);
+  }
+ 
   async runDemo() {
     const category1 = new Category();
     category1.name = "TypeScript";
