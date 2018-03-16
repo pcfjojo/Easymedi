@@ -4,8 +4,6 @@ import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { createConnection } from 'typeorm'
 
-import { HomePage } from '../pages/home/home';
-
 import { Author } from '../entities/author';
 import { Category } from '../entities/category';
 import { Post } from '../entities/post';
@@ -14,7 +12,7 @@ import { Post } from '../entities/post';
   templateUrl: 'app.html'
 })
 export class MyApp {
-  rootPage: any;
+  rootPage: string = "HomePage";
 
   constructor(platform: Platform, statusBar: StatusBar, splashScreen: SplashScreen) {
     platform.ready().then(async () => {
@@ -54,8 +52,6 @@ export class MyApp {
           ]
         });
       }
-
-      this.rootPage = HomePage;
     });
   }
 }

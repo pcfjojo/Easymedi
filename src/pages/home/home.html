@@ -7,49 +7,47 @@
 </ion-header>
 
 <ion-content>
-    <ion-card>
         <ion-list>
-          <button ion-item (click)="dashboardPage()">
+          <button ion-item (click)="goToPage('DashboardPage')">
             <ion-icon name="speedometer" item-start></ion-icon>
             Dashboard
           </button>
       
-          <button ion-item (click)="medicinePage()"> 
+          <button ion-item (click)="goToPage('MedicinePage')"> 
             <ion-icon name="medkit" item-start></ion-icon>
             Medicine
           </button>
       
-          <button ion-item (click)="clientPage()">
+          <button ion-item (click)="goToPage('ClientListPage')">
             <ion-icon name="contacts" item-start></ion-icon>
             Clients
           </button>
       
-          <button ion-item (click)="salesPage()">
+          <button ion-item (click)="goToPage('SalePage')">
             <ion-icon name="cash" item-start></ion-icon>
             All Sales
           </button>
       
-          <button ion-item (click)="expensesPage()">
+          <button ion-item (click)="goToPage('ExpensePage')">
             <ion-icon name="ios-basket" item-start></ion-icon>
             Expenses
           </button>
       
-          <button ion-item (click)="appointmentPage()">
+          <button ion-item (click)="goToPage('AppointmentPage')">
               <ion-icon name="calendar" item-start></ion-icon>
               Appointment
             </button>
 
-          <button ion-item (click)="reportPage()">
+          <button ion-item (click)="goToPage('ReportPage')">
             <ion-icon name="paper" item-start></ion-icon>
             Reports
           </button>
       
-          <button ion-item (click)="staffPage()">
+          <button ion-item (click)="goToPage('StaffPage')">
               <ion-icon name="person" item-start></ion-icon>
               Staff
             </button>
         </ion-list>
-      </ion-card>
 
 
 

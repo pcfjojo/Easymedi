@@ -1,19 +1,11 @@
-import { StaffPage } from './../staff/staff';
-import { AppointmentPage } from './../appointment/appointment';
-import { ExpensePage } from './../expense/expense';
-import { SalePage } from './../sale/sale';
-import { MedicinePage } from './../medicine/medicine';
-import { DashboardPage } from './../dashboard/dashboard';
 import { Component } from '@angular/core';
-import { NavController, App } from 'ionic-angular';
+import { NavController, App, IonicPage } from 'ionic-angular';
 import { getRepository, Repository } from 'typeorm';
 
 import { Author } from '../../entities/author';
 import { Category } from '../../entities/category';
 import { Post } from '../../entities/post';
-import { ClientPage } from '../client/client';
-import { ReportPage } from '../report/report';
-
+@IonicPage()
 @Component({
   selector: 'page-home',
   templateUrl: 'home.html'
@@ -28,29 +20,8 @@ export class HomePage {
     this.runDemo();
   }
 
-  dashboardPage() {
-    this.navCtrl.push(DashboardPage);
-  }
-  medicinePage() {
-    this.navCtrl.push(MedicinePage);
-  }
-  clientPage() {
-    this.navCtrl.push(ClientPage);
-  }
-  salesPage() {
-    this.navCtrl.push(SalePage);
-  }
-  expensesPage() {
-    this.navCtrl.push(ExpensePage);
-  }
-  appointmentPage() {
-    this.navCtrl.push(AppointmentPage);
-  }
-  reportPage() {
-    this.navCtrl.push(ReportPage);
-  }
-  staffPage() {
-    this.navCtrl.push(StaffPage);
+  goToPage(pageName : string){
+    this.navCtrl.push(pageName);
   }
  
   async runDemo() {
