@@ -1,6 +1,3 @@
-import { ReportPage } from './../pages/report/report';
-import { MedicinePage } from './../pages/medicine/medicine';
-import { DashboardPage } from './../pages/dashboard/dashboard';
 import { BrowserModule } from '@angular/platform-browser';
 import { ErrorHandler, NgModule } from '@angular/core';
 import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
