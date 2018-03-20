@@ -1,12 +1,9 @@
+import { Client } from './../entities/client';
 import { Component } from '@angular/core';
 import { Platform } from 'ionic-angular';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { createConnection } from 'typeorm'
-
-import { Author } from '../entities/author';
-import { Category } from '../entities/category';
-import { Post } from '../entities/post';
 
 @Component({
   templateUrl: 'app.html'
@@ -32,9 +29,7 @@ export class MyApp {
           logging: ['error', 'query', 'schema'],
           synchronize: true,
           entities: [
-            Author,
-            Category,
-            Post
+            Client
           ]
         });
       } else {
@@ -46,9 +41,7 @@ export class MyApp {
           logging: ['error', 'query', 'schema'],
           synchronize: true,
           entities: [
-            Author,
-            Category,
-            Post
+            Client
           ]
         });
       }

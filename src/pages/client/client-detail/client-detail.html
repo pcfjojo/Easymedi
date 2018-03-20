@@ -7,12 +7,49 @@
 <ion-header>
 
   <ion-navbar>
-    <ion-title>client-detail</ion-title>
+    <ion-title>{{ client?.name}}</ion-title>
   </ion-navbar>
 
 </ion-header>
 
 
 <ion-content padding>
+      <ion-card>
+          <img src="assets/img/user.png"/>
+      </ion-card>
+      <ion-item>
+        <ion-icon name="contact"></ion-icon> 
+        <span class="text">{{client?.name}}</span>
+      </ion-item>
 
+      <ion-item>
+        <ion-icon name="calendar"></ion-icon> 
+        <span class="text">{{client?.dob}}</span>
+      </ion-item>
+
+      <ion-item>
+        <ion-icon name="locate"></ion-icon> 
+        <span class="text">{{client?.address}}</span>
+      </ion-item>
+
+      <ion-item>
+        <ion-icon name="phone-portrait"></ion-icon> 
+        <span class="text">{{client?.mobile}}</span>
+      </ion-item>
+
+      <ion-item>
+        <ion-icon name="call"></ion-icon> 
+        <span class="text">{{client?.phone}}</span>
+      </ion-item>
 </ion-content>
+
+<ion-footer>
+    <ion-toolbar>
+        <ion-buttons end>
+                <button ion-button icon-right color="primary" (click)="goToPage('ClientCreatePage')">
+                    Modify
+                    <ion-icon name="open"></ion-icon>
+                </button>
+          </ion-buttons>
+    </ion-toolbar>
+  </ion-footer>

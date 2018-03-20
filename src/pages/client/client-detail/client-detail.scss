@@ -1,3 +1,16 @@
 page-client-detail {
-
+    .icon {
+        display: inline-block;
+        vertical-align: middle;
+       }
+       
+       .text{
+        padding-left: 10px;
+         display: inline-block;
+         vertical-align: middle;
+       }
+       ion-card img {
+        height: 160px;
+        align-content: center;
+      }
 }

@@ -10,7 +10,8 @@
         "ionic:serve": "ionic-app-scripts serve"
     },
     "config": {
-        "ionic_webpack": "./config/webpack.config.js"
+        "ionic_webpack": "./config/webpack.config.js",
+        "ionic_source_map": "source-map"
     },
     "dependencies": {
         "@angular/common": "4.4.3",
